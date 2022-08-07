@@ -9,8 +9,6 @@
 #include "../drivers/display.h"
 
 void start_kernel() {
-    clear();
-
-	char str[] = "Welcome to Lavender.";
-    printf(str);
+    clear_screen();
+    print_string("Hello, World!");
 }
