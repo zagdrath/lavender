@@ -1,2 +1,5 @@
 # Ignore built kernel files
 build/
+
+# Ignore editor specific files
+.vscode/

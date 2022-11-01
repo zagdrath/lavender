@@ -14,5 +14,10 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-unsigned char byte_in (unsigned short port);
-void byte_out (unsigned short port, unsigned char data);
+unsigned char byte_in(unsigned short port);
+
+void byte_out(unsigned short port, unsigned char data);
+
+unsigned short word_in(unsigned short port);
+
+void word_out(unsigned short port, unsigned char data);

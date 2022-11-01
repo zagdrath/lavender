@@ -14,8 +14,8 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include "kernel.h"
-#include "../drivers/display.h"
+#include "../include/kernel.h"
+#include "../include/display.h"
 
 void start_kernel() {
     clear_screen();

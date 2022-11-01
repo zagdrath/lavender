@@ -14,14 +14,24 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include "ports.h"
+#include "../include/ports.h"
 
-unsigned char byte_in (unsigned short port) {
+unsigned char byte_in(unsigned short port) {
     unsigned char result;
-    __asm__("in %%dx, %%al" : "=a" (result) : "d" (port));
+    asm("in %%dx, %%al" : "=a"(result) : "d"(port));
     return result;
 }
 
-void byte_out (unsigned short port, unsigned char data) {
-    __asm__("out %%al, %%dx" : : "a" (data), "d" (port));
+void byte_out(unsigned short port, unsigned char data) {
+    asm("out %%al, %%dx" : : "a"(data), "d"(port));
+}
+
+unsigned short word_in(unsigned short port) {
+    unsigned short result;
+    asm("in %%dx, %%ax" : "=a"(result) : "d"(port));
+    return result;
+}
+
+void word_out(unsigned short port, unsigned char data) {
+    asm("out %%ax, %%dx" : : "a"(data), "d"(port));
 }

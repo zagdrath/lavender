@@ -14,8 +14,8 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include "display.h"
-#include "ports.h"
+#include "../include/display.h"
+#include "../include/ports.h"
 
 void set_cursor(int offset) {
     offset /= 2;
